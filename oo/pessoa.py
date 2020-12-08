@@ -4,6 +4,12 @@ class Pessoa:
         self.idade = idade
         self.nome = nome
         self.filho = list(filho)
+    @staticmethod
+    def metodo_estatico():
+        return 42
+    @classmethod
+    def nome_e_atributos_de_classes(cls):
+        return f'{cls} -- olhos {cls.olhos}'
 
     def comprimentar(self):
         return f'ola {id(self)}'
@@ -23,7 +29,7 @@ if __name__ == '__main__':
     miguel.olhos = 1
     print(miguel.__dict__)
     print(kelvem.__dict__)
-    print(id(Pessoa.olhos))
-    print(id(miguel.olhos))
-    print(id(kelvem.olhos))
-
+    print(id(Pessoa.olhos), id(miguel.olhos), id(kelvem.olhos))
+    print(Pessoa.metodo_estatico())
+    print(miguel.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classes(), miguel.nome_e_atributos_de_classes())
