@@ -33,3 +33,4 @@ if __name__ == '__main__':
     print(Pessoa.metodo_estatico())
     print(miguel.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classes(), miguel.nome_e_atributos_de_classes())
+
